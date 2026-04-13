@@ -1,0 +1,249 @@
+
+*{
+    direction: rtl;
+}
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url("../image/back.jpg");
+    background-size: cover;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.navbar {
+    backdrop-filter: blur(80px);
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.offers {
+    margin-top: 40px;
+    width: 100%;
+}
+
+.offers h2 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.offer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+
+.offer-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 15px 15px 0 0;
+    background-size: auto;
+}
+
+.offer-card h3 {
+    font-size: 22px;
+    color: #0077b6;
+    margin: 15px 0;
+}
+
+.offer-card p {
+    font-size: 16px;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.offer-card a {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding: 10px 18px;
+    background-color: #0077b6;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.offer-card a:hover {
+    background-color: #005f8d;
+}
+
+
+.cities {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.cities h2 {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+}
+
+.city-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.city-card {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: 280px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.city-card h3 {
+    font-size: 22px;
+    color: #0077b6;
+    margin: 15px 0;
+}
+
+.city-card p {
+    font-size: 16px;
+    color: #555;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.popup.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.popup h3 {
+    color: #0077b6;
+    margin-bottom: 15px;
+}
+
+.popup p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.popup button {
+    padding: 10px 20px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+    background-color: #005f8d;
+}
+
+
+#paymentPopup input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+#paymentPopup button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#paymentPopup button:hover {
+    background-color: #005f8d;
+}

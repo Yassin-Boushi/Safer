@@ -1,0 +1,184 @@
+
+* {
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-image: url("/back.jpg");
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+}
+
+/* الشريط العلوي */
+.navbar {
+    backdrop-filter: blur(80px);
+    padding: 15px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+   
+}
+.navbar ul .titles , .navbar ul .account{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+}
+.navbar ul .account{
+    justify-content: end;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.flights-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: calc(100vw - 80px);
+    padding: 20px;
+    margin: 20px;
+}
+
+.flight {
+    background-color: #0077b6;
+    color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.flight h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.flight p {
+    font-size: 16px;
+}
+
+.flight:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+
+.content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 300px;
+}
+
+.content .details{
+    display: flex !important;
+    align-items: center;
+    justify-content: start;
+    gap:30px;
+}
+.content .details .price{
+    color: #0077b6;
+    font-weight: bold;
+}
+.content .details div:first-child{
+    min-width: 100px;
+}
+
+
+.form-add{
+    background-color: white;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
+    padding: 30px;
+    border-radius: 40px ;
+    gap: 20px;
+    width: fit-content;
+}
+.form-add div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+}
+.form-add input{
+    height: 40px;
+}
+.actions-button{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button {
+    margin-top: 10px;
+    padding: 12px 20px;
+    background: #0077b6;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+}
+
+.button.edit{
+    background-color: rgb(225, 100, 22);
+}
+.button.delete{
+    background-color: rgb(225, 22, 22);
+}
+
+button:hover {
+    background: #005f8d;
+    transform: scale(1.05);
+}

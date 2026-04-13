@@ -1,0 +1,28 @@
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="/css/add.css">
+<div class="container ">
+    <div class="frame " style="height:550px" >
+        <div class="nav">
+            <ul class="links">
+                <li class="signin-active"><a class="btn">add ticket</a></li>
+            </ul>
+        </div>
+        <div ng-app ng-init="checked = false">
+
+            <form class="form-signin"  action="/ticket/{{$flight_id}}" method="post" >
+                @csrf
+
+                <label for="name">name</label>
+                <input class="form-styling" type="text" name="name" value="{{auth()->user()->is_employee ==0 ?auth()->user()->name:''}}" />
+                @if(auth()->user()->is_employee ==0 )
+                <label for="card_code">card_code </label> <input class="form-styling" type="text"
+                    name="card_code"  />
+                    @endif
+                <div>
+                <input type="submit" style="background-color: rgb(247, 171, 30) " class=" btn-signup " value="ADD">
+            </div>
+                <br>
+
+            </form>
+        </div></div>
+           
